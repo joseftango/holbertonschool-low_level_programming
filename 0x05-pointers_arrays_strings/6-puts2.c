@@ -1,19 +1,22 @@
 #include "main.h"
 /**
- *puts2- prints  a string
- * @str: input
- * Return: void
+ * puts2 - check the code
+ *@str : pointer
+ * Return: Always 0.
  */
 void puts2(char *str)
 {
-	int i;
+	int a;
+	int b;
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (a = 0; str[a] != '\0'; a++)
+	;
+	for (b = 0; b <= a - 1; b += 2)
 	{
-		if (i % 2 == 0)
-		{
-		_putchar(str[i]);
-		}
+	putchar(str[b]);
 	}
-	_putchar('\n');
+	{
+	putchar('\n');
+	}
+
 }
