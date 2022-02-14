@@ -1,19 +1,23 @@
 #include "main.h"
+#include <stdio.h>
 /**
- *puts2- prints  a string
- * @str: input
+ *rev_string- prints  a string
+ * @s: input
  * Return: void
  */
-void puts2(char *str)
+void rev_string(char *s)
 {
-	int i;
+	int i, b, t;
+	int a = 0;
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (i % 2 == 0)
-		{
-		_putchar(str[i]);
-		}
+		a = a + 1;
 	}
-	_putchar('\n');
+	for (b = 0; b < a / 2; b++)
+	{
+		t = s[b];
+		s[b] = s[a - b - 1];
+		s[a - b - 1] = t;
+	}
 }
