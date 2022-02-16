@@ -16,13 +16,15 @@ int main(void)
 	{
 		for (digits[1] = 0; digits[1] < 10; ++(digits[1]))
 		{
-			for (i = 0; i < 2; ++i)
-				putchar('0' + digits[i]);
-
-			if (digits[0] != 9 || digits[1] != 9)
+			if (digits[0] < digits[1])
 			{
 				for (i = 0; i < 2; ++i)
-					putchar(sep[i]);
+					putchar('0' + digits[i]);
+				if (digits[0] != 8 || digits[1] != 9)
+				{
+					for (i = 0; i < 2; ++i)
+						putchar(sep[i]);
+				}
 			}
 		}
 	}
