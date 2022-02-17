@@ -1,12 +1,10 @@
 #include  <stdio.h>
-#include "main.h" 
+#include "main.h"
 /**
-* main – prints “_putchar”
-*
-return : 0
-**/
-int main (void)
-
+ * main - writes _putchar
+ * Return: On success void.
+ */
+int main(void)
 {
 
 	putchar ('_');
@@ -17,5 +15,7 @@ int main (void)
 	putchar ('h');
 	putchar ('a');
 	putchar ('r');
+	putchar ('\n');
+
 	return (0);
 }
