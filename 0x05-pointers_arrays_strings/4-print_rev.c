@@ -1,9 +1,10 @@
 #include "main.h"
 #include <stdio.h>
 /**
- *rev_string- prints  a string
- * @s: input
- * Return: void
+ * print_rev -print string revers
+ * @s:revers
+ * Return: On success 1
+ * On error, -1 is returned, and errno is set appropriately.
  */
 void print_rev(char *s)
 {
