@@ -1,4 +1,3 @@
-#include <string.h>
 #include "main.h"
 /**
  * puts2 - check the code
@@ -7,11 +6,15 @@
  */
 void puts2(char *str)
 {
-int len = strlen(str);
-int a;
-for (a = 0; a < len; a += 2)
-{
-	putchar(*str);
-	str += 2;
-}
+	int i;
+	int j;
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+	}
+	for (j = 0; j < i; j += 2)
+	{
+	_putchar(str[j]);
+	}
+	_putchar('\n');
 }
