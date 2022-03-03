@@ -10,6 +10,6 @@ void puts2(char *str)
 int len = strlen(str);
 for (int a = 0; a < len; a += 2)
 {
-	putchar(*str);
+	_putchar(*str);
 	str += 2;
 }
