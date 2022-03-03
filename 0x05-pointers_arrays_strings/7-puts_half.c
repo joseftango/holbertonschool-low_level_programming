@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <string.h>
+#include "main.h"
 /**
  *puts_half- prints  a string
  * @str: input
@@ -14,7 +13,8 @@ for (i = 0; str[i] != '\0' ; i++)
 b = (i + 1) / 2;
 while (str[b] != '\0')
 {
-	putchar(str[b]);
+	_putchar(str[b]);
 	b++;
 }
+	_putchar('\0');
 }
