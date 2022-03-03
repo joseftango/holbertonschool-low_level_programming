@@ -8,8 +8,10 @@
 void puts2(char *str)
 {
 int len = strlen(str);
-for (int a = 0; a < len; a += 2)
+int a;
+for (a = 0; a < len; a += 2)
 {
-	_putchar(*str);
+	putchar(*str);
 	str += 2;
+}
 }
