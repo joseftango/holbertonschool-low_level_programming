@@ -1,5 +1,6 @@
 #include <unistd.h>
-#include <main.h>
+#include "main.h"
+
 /**
  **_strncpy -src overwrite in dest
  *@dest:string pointer
@@ -12,14 +13,14 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	int c;
 
-	for (c = 0; c < n && src[c] != '\0'; c++)
+	for (c = 0 ; c < n && src[c] != '\0' ; c++)
 	{
-		dest[c] = src[c]
+		dest[c] = src[c];
 	}
-	while(c<n)
+	for (; c < n ; c++)
 	{
-	c++;
 	dest[c] = '\0';
 	}
+
 	return (dest);
 }
