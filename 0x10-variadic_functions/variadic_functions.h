@@ -1,5 +1,5 @@
-#ifndef variadic_functions_h_
-#define variadic_functions_H_
+#ifndef HEADER_FILE
+#define HEADER_FILE
 
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
