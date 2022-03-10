@@ -18,8 +18,7 @@ return (0);
 va_start(total, n);
 for (unsigned int x = 0; x < n; x++)
 {
-int a = va_arg(total, int);
-sum = sum + a;
+sum = sum + va_arg(total, int);
 }
 va_end(total);
 return (sum);
