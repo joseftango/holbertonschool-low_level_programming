@@ -12,5 +12,5 @@ d->name = " (nil)";
 if (d->owner == NULL)
 d->owner = " (nil)";
 
-printf("name: %s\nage: %f\nOwner: %s\n", (*d).name, (*d).age, (*d).owner);
+printf("name: %s\nage: %f\nOwner: %s\n", d->name, d->age, d->owner);
 }
