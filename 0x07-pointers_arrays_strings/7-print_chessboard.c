@@ -15,7 +15,6 @@ for (j = 0; j < 8; j++)
 {
 putchar (a[i][j]);
 }
-if (i < 7)
 putchar ('\n');
 }
 }
