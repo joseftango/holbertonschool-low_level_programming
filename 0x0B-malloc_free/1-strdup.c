@@ -14,10 +14,11 @@ if (str == NULL)
 return (NULL);
 str1 = malloc(x *sizeof(char) + 1);
 if (str1 == NULL)
-return NULL;
+return (NULL);
 for (i = 0; i < x; i++)
 {
 *(str1 + i) = *(str + i);
 }
+*(str + i) = '\0';
 return (str1);
 }
