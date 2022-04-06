@@ -11,13 +11,13 @@ int i, x;
 char *str1;
 x = strlen(str);
 if (str == NULL)
-    return (NULL);
-str1 = malloc(x*sizeof(char));
+return (NULL);
+str1 = malloc(x *sizeof(char));
 if (str1 == NULL)
-    return (NULL);
+return (NULL);
 for (i = 0; i < x; i++)
 {
-    *(str1 + i) = *(str + i);
+*(str1 + i) = *(str + i);
 }
 return (str1);
 }
