@@ -16,8 +16,7 @@ if (s2 == NULL)
 s2 = "";
 if (n >= len2)
 n = len2;
-
-str = (char *)malloc(sizeof(s1) + (n + 1));
+str = malloc(len1 + (n + 1));
 if (str == NULL)
 return (NULL);
 
