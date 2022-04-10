@@ -10,9 +10,9 @@ int *array_range(int min, int max)
 int *p, i, tsize = (max - min) + 1;
 if (min > max)
 return (NULL);
-p = malloc(tsize * sizeof(int));
+p = (int *) malloc(tsize * sizeof(int));
 if (p == NULL)
-return(NULL);
+return (NULL);
 for (i = 0; i < tsize ; i++)
 p[i] = i;
 return (p);
