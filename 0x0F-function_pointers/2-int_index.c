@@ -17,7 +17,7 @@ for (i = 0; i < size; i++)
 {
 res = cmp(array[i]);
 if (res == 98 || res > 0)
-break;
-}
 return (i);
+}
+return (-1);
 }
