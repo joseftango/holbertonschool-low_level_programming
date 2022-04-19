@@ -1,36 +1,39 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
 /**
- *main - check the code
- *@argc: argument count
- *@argv: argument value
- * Return: Always 0.
+ * main - multiplies two integers
+ * @argc : counter
+ * @argv: array
+ * Return: 0 (Success)
  */
 int main(int argc, char *argv[])
 {
-	int i, j, r = 0;
+	int sum = 0;
+	int i, j, l;
 
-	for (i = 1; i < argc ; i++)
+	if (argc == 1)
 	{
-		for (j = 0 ; argv[i][j] ; j++)
-		{
-			if (isdigit(argv[i][j]) == 0)
-			{
-				printf("Error\n");
-				return (1);
-			}
-		}
+		printf("0\n");
 	}
-
-	for (i = 1; i < argc ; i++)
+	else
 	{
-		{
-			r += atoi(argv[i]);
+	for (i = 1; i < argc; i++)
+	{
+		l = strlen(argv[i]);
 
-		}
-
+	for (j = 0; j < l; j++)
+	{
+		if (isdigit(argv[i][j]) == 0)
+	{
+		printf("Error\n");
+	return (1);
 	}
-
-	printf("%d\n", r);
-
+	}
+		sum += atoi(argv[i]);
+	}
+		printf("%d\n", sum);
+	}
 	return (0);
 }
