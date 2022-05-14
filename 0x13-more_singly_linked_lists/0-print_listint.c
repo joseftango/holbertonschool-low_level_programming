@@ -1,18 +1,20 @@
 #include "lists.h"
 /**
- * print_listint -  prints all elements
- * @h : pointer
- * Return: nodes
-*/
+*print_listint - function that print all element of a list
+*@h: pointer to a struct
+*Return: number of nodes in list
+**/
 size_t print_listint(const listint_t *h)
 {
-	unsigned int node = 0;
+size_t count = 0;
+const listint_t *ptr;
+ptr = h;
 
-	while (h != NULL)
-	{
-	printf("%d\n", h->n);
-	h = h->next;
-	node++;
-	}
-	return (node);
+while (ptr != NULL)
+{
+printf("%d\n", ptr->n);
+count++;
+ptr = ptr->next;
+}
+return (count);
 }
