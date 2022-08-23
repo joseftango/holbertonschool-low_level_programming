@@ -1,17 +1,19 @@
 #include "lists.h"
 /**
- * listint_len - returns number of elements
- * @h : pointer
- * Return: nodes
-*/
+* listint_len - function that count the number of elements in a list
+* @h: pointer to a struct
+* Return: number of elements
+**/
+
 size_t listint_len(const listint_t *h)
 {
-	unsigned int node = 0;
+size_t count = 0;
+const listint_t *tmp = h;
 
-	while (h != NULL)
-	{
-	h = h->next;
-	node++;
-	}
-	return (node);
+while (tmp != NULL)
+{
+tmp = tmp->next;
+count++;
+}
+return (count);
 }
