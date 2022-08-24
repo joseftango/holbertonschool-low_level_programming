@@ -31,6 +31,7 @@ index--;
 }
 pre->next = current->next;
 free(current);
+current = NULL;
 }
 return (1);
 }
