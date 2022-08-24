@@ -11,7 +11,7 @@ listint_t *current;
 listint_t *pre;
 current = *head;
 
-if (head == NULL || *head == NULL)
+if (*head == NULL)
 return (-1);
 
 else if (index == 0)
