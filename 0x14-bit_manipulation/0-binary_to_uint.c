@@ -15,7 +15,7 @@ len = strlen(b);
 
 for (c = len - 1; c >= 0; c--)
 {
-if (b[c] != '0' && b[c] != '1')
+if ((b[c] != '0' && b[c] != '1') || b == NULL)
 return (0);
 if (b[c] == '1')
 {
