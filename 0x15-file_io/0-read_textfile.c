@@ -7,8 +7,11 @@
 **/
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-int fd, n, i;
-char *s = (char *) calloc(2000, sizeof(char));
+int fd, n;
+char *s = (char *) malloc(letters * sizeof(char));
+
+if (s == NULL)
+return (0);
 
 fd = open(filename, O_RDONLY);
 
@@ -21,10 +24,9 @@ n = read(fd, s, letters);
 
 s[letters] = '\0';
 
-for (i = 0; i <= n; i++)
-{
-_putchar(s[i]);
-}
+write(STDOUT_FILENO, s, n);
+
+free(s);
 
 close(fd);
 
