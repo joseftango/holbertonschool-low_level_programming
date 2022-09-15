@@ -16,31 +16,22 @@ return ;
 
 if (!(ht->array))
 {
-	free(ht);
-	return;
+free(ht);
+return;
 }
 
 while (i < ht->size)
 {
 tmp = ht->array[i];
 
-while (tmp)
+while (tmp != NULL)
 {
-if (!tmp->next)
-{
-free(tmp->key);
-free(tmp->value);
-free(tmp);
-}
 
-else
-{
 del = tmp;
 tmp = tmp->next;
 free(del->key);
 free(del->value);
 free(del);
-}
 
 }
 }
