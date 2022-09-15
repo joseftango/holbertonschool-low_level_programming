@@ -13,7 +13,7 @@ int index = 0;
 hash_node_t *tmp = NULL;
 hash_node_t *new = malloc(sizeof(hash_node_t));
 
-if ((ht == NULL || ht->array ==NULL) || (new == NULL || key == NULL))
+if ((ht == NULL || ht->array == NULL) || (new == NULL || key == NULL))
 return (0);
 
 index = key_index((const unsigned char *)key, ht->size);
