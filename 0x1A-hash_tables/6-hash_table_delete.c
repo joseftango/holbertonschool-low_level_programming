@@ -34,6 +34,7 @@ free(del->value);
 free(del);
 
 }
+i++;
 }
 free(ht->array);
 free(ht);
