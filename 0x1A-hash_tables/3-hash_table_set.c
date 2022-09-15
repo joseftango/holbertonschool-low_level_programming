@@ -32,15 +32,15 @@ return (1);
 tmp = tmp->next;
 }
 
-
 new->key = strdup(key);
 new->value = strdup(value);
 
 if (ht->array[index] != NULL)
-ht->array[index]->next = new;
-
+new->next = ht->array[index];
 
 else
+new->next = NULL;
+
 ht->array[index] = new;
 
 return (1);
