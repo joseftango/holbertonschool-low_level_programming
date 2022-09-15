@@ -11,8 +11,8 @@ unsigned int i = 0;
 hash_node_t *tmp = NULL;
 hash_node_t *del = NULL;
 
-if (!ht)
-return ;
+if (!ht && !ht->size)
+return;
 
 if (!(ht->array))
 {
