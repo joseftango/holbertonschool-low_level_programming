@@ -9,16 +9,15 @@
 
 int binary_search(int *array, size_t size, int value)
 {
-size_t i = 0, j = 0, l = 0, r = size - 1, mid = (l + r) / 2;
+size_t j = 0, l = 0, r = size - 1, mid;
 char *sep = ", ";
 
 	if (!array)
 		return (-1);
 
-	for (i = 0; i < size; i++)
+	while (l <= r)
 	{
-		if (l > r)
-			break;
+		mid = (l + r) / 2;
 
 		printf("Searching in array: ");
 
@@ -36,16 +35,10 @@ char *sep = ", ";
 				return (mid);
 
 			else if (value > array[mid])
-			{
 				l = mid + 1;
-				mid = (l + r) / 2;
-			}
 
 			else
-			{
 				r = mid - 1;
-				mid = (l + r) / 2;
-			}
 	}
 
 return (-1);
