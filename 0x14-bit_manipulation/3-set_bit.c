@@ -8,16 +8,16 @@
 
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned int clearBit;
-	unsigned int mask;
+	unsigned long int mask = 1 << index;
+	int check;
 
 	if (index > 64)
 		return (-1);
 
-	clearBit = ~(1 << index);
-	mask = *n & clearBit;
+	check = *n |= mask;
 
-		*n = mask | (1 << index);
-
-return (*n);
+	if (check)
+		return (1);
+	else
+		return (-1);
 }
